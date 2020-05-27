@@ -1,51 +1,45 @@
 .features {
 
     .container {
-
+        background: linear-gradient(to bottom right, $color-grey-1, #fff);
+        box-shadow: $box-shadow-3;
     }
 
     .group {
-        margin: 0 -2em;
-
-        @media (max-width: 768px) {
-            margin: 0;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4em;
+        max-width: 920px;
+        margin: 0 auto;
+        padding-bottom: 4em;
     }
 
     .item {
-        text-decoration: none;
-        display: block;
-        color: inherit;
-        position: relative;
-        margin: 1em;
-        width: calc(33.333% - 2em);
-        background: #fff;
-        border-radius: 0.25em;
-        transition: $transition-1;
-        overflow: hidden;
+        //text-decoration: none;
+        //display: block;
+        //color: inherit;
+        display: flex;
+        align-items: flex-start;
 
-        .info {
-            width: 100%;
-            padding: 1em;
+        .icon {
+            @include fluid('font-size', 1.25rem, 1.625rem);
+            margin-right: 1em;
+            min-width: 2rem;
+            text-align: center;
+            color: $color-1;
+        }
+
+        .details {
+
         }
 
         .title {
-
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
 
         .description {
-
-        }
-
-        &:hover,
-        &:focus {
-            box-shadow: $box-shadow-2;
+            max-width: 35ch;
         }
     }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
 }

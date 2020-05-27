@@ -1,6 +1,15 @@
-.section_heading{
-    width: 100%;
-    max-width: $container-width;
-    margin: 0 auto;
-    padding:0 1em;
+.section-heading {
+    text-align: center;
+    margin: 3em 0 6em;
+
+    .sup {
+        text-transform: uppercase;
+        font-weight: 600;
+        opacity: 0.65;
+        font-size: 1rem;
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+    }
 }
