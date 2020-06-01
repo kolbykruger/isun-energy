@@ -1,19 +1,25 @@
 .header {
+    height: $header-height;
 
     .container {
         position: relative;
         max-width: $container-width;
+        display: flex;
+        align-items: center;
         width: 100%;
+        height: 100%;
+        padding: 1em;
     }
 
     .group {
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        width: 100%;
     }
 
     .logo {
-        width:100%;
-        max-width: 240px;
+        width: 100%;
+        max-width: 100px;
 
         a {
             display: block;

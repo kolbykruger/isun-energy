@@ -1,0 +1,44 @@
+.impact {
+    min-height: 100vh;
+    padding: 2vw 0;
+    background: $color-2;
+    color: #fff;
+    margin-bottom: 0;
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .group {
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    .stats {
+        flex: 1;
+
+        p {
+            margin: 0;
+        }
+
+        .value {
+            color: $color-1;
+            font-weight: 300;
+            font-size: 5rem;
+        }
+
+        .label {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+}

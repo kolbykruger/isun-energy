@@ -8,7 +8,7 @@ $button-background: $color-1;
     justify-content: flex-start;
     flex-flow: row wrap;
     width: 100%;
-
+    margin-top: 1.5em;
 
     &-center {
         justify-content: center;
@@ -21,21 +21,32 @@ $button-background: $color-1;
     &-right {
         justify-content: flex-end;
     }
-
 }
 
-
+.button {
+    appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $button-color;
+    border: none;
+    outline: none;
+}
 
 .button {
     display: inline-flex;
     align-items: center;
     margin: 0;
-    padding: 0.75em 1em;
+    padding: 1em 2.5em;
     background: $button-background;
     color: $button-color;
-    border-radius: 0.25em;
-    line-height: 1;
-    transition: 150ms ease;
+    border-radius: 0.5em;
+    line-height: 1.25;
+    font-weight: 500;
+    transition: 100ms ease;
     text-decoration: none;
     user-select: none;
     cursor: pointer;
@@ -47,7 +58,8 @@ $button-background: $color-1;
     &:hover,
     &:focus {
         background: lighten($button-background, 10%);
-        box-shadow: $box-shadow-2;
+        box-shadow: $box-shadow-3;
+        transform: translate(0, -0.25em);
     }
 
     &:active {
@@ -56,9 +68,12 @@ $button-background: $color-1;
         transform: translateY(1px);
     }
 
-    i + span,
-    span + i {
+    i + span {
         margin-left: 0.5em;
+    }
+
+    span + i {
+        margin-left: 1.5em;
     }
 
     // Unique styles
@@ -69,7 +84,7 @@ $button-background: $color-1;
     &-ghost {
         background: transparent;
         color: $button-background;
-        border: 1px solid $button-background;
+        border: 2px solid $button-background;
     }
     &-secondary {
         color: inherit;
@@ -86,17 +101,4 @@ $button-background: $color-1;
             margin: 0 1em 1em 0;
         }
     }
-}
-
-button.button,
-input[type="submit"].button {
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: $button-color;
-    border: none;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }

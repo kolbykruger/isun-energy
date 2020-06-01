@@ -10,6 +10,17 @@ let blogCategories = {
     }
 }.init();
 
+//Video Scroll
+var videoScroll = document.querySelector('.video-scroll');
+if (videoScroll) {
+    videoScroll.addEventListener('click', function() {
+        window.scroll({
+            top: document.querySelector('.introduction').getBoundingClientRect().bottom + window.scrollY,
+            behavior: 'smooth'
+        });
+    })
+}
+
 //Responsive iFrame
 $('iframe[src*="youtube"],iframe[src*="vimeo"]').wrap('<div class="responsive-iframe"/>');
 

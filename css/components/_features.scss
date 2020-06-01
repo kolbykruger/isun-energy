@@ -1,15 +1,14 @@
 .features {
+    margin-top: 6em;
 
     .container {
-        background: linear-gradient(to bottom right, $color-grey-1, #fff);
-        box-shadow: $box-shadow-3;
+
     }
 
     .group {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 4em;
-        max-width: 920px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5em;
         margin: 0 auto;
         padding-bottom: 4em;
     }

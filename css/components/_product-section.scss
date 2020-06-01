@@ -1,0 +1,51 @@
+.product-section {
+    min-height: 100vh;
+    padding: 2vw 0;
+    background: linear-gradient(to bottom, $color-grey-1, #fff);
+    margin-bottom: 0;
+
+    &:nth-of-type(odd) {
+        .group {
+            flex-flow: row-reverse;
+        }
+    }
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .group {
+        align-items: center;
+    }
+
+    .text,
+    .image {
+        flex: 1;
+        padding: 5em;
+    }
+
+    .video {
+        flex: 1.618;
+        padding: 5em;
+    }
+
+    .text {
+
+    }
+
+    .image {
+        background: $color-3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+    }
+}

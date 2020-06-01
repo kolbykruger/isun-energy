@@ -69,7 +69,7 @@
         }
     }
 
-    a {
+    a:not(.button) {
         @include fs(16px);
         display: block;
         color: $color-0;
