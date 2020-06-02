@@ -8,7 +8,8 @@
         padding: 0;
 
         ul {
-            border-radius: 0.25em;
+            border-top: 0.25em solid $color-1;
+            border-radius: 0.5em;
             padding: 0;
             left: 0;
             opacity: 0;
@@ -23,14 +24,38 @@
             overflow: hidden;
 
             a {
-                @include fs(13px);
-                padding: 10px;
+                @include fs(15px);
+                padding: 0.85em 1.125em;
                 margin: 0;
+
+                &:not(.button) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                span {
+                    opacity: 0;
+                    transform: translate(-1em, 0);
+                    transition: transform 150ms ease;
+
+                    i {
+                        @include fs(15px);
+                    }
+                }
 
                 &:hover,
                 &:focus {
-                    background: $color-grey-2;
+                    background: #f6f9fc;
+
+                    span {
+                        opacity: 0.5;
+                        transform: translate(0, 0);
+                    }
                 }
+            }
+
+            li:not(:last-of-type) a {
+                border-bottom: 1px solid #f6f9fc;
             }
         }
     }
