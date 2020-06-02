@@ -1,3 +1,17 @@
+//Animations
+$(document).ready(function() {
+    var controller = new ScrollMagic.Controller;
+    document.body.classList.add('animation-active');
+    $("section").each(function() {
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 0.75,
+            reverse: true
+        }).setClassToggle(this, "active").addTo(controller)
+        .addTo(controller);
+    })
+});
+
 //Blog Categories (if a selectbox)
 let blogCategories = {
     elem: document.querySelector('select#blog_categories'),

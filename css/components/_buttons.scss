@@ -46,7 +46,7 @@ $button-background: $color-1;
     border-radius: 0.5em;
     line-height: 1.25;
     font-weight: 500;
-    transition: 100ms ease;
+    transition: 50ms ease;
     text-decoration: none;
     user-select: none;
     cursor: pointer;
@@ -87,12 +87,22 @@ $button-background: $color-1;
         border: 2px solid $button-background;
     }
     &-secondary {
-        color: inherit;
-        background: rgba(0,0,0,0.25);
+        color: $color-2;
+        background: $color-3;
+
+        &:hover,
+        &:focus {
+            background: $color-1;
+            color: #fff;
+        }
     }
     &-text {
         color: $color-1;
         background: transparent;
+    }
+
+    &-slim {
+        padding: 1em 1.5em;
     }
 
     @media (max-width: 768px) {

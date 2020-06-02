@@ -42,6 +42,9 @@ body {
     @include fs(16px);
     max-width: 100vw;
     overflow-x: hidden;
+
+    background-image: url('../images/diag-dots.svg');
+    background-size: 20px;
 }
 
 p {

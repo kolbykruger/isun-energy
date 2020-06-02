@@ -1,6 +1,40 @@
 .features {
     margin-top: 6em;
 
+    .animation-active & {
+
+        &.active {
+
+            .item {
+                transform: translate(0, 3em);
+                opacity: 0;
+                animation: features 600ms ease-in-out forwards;
+
+                @for $i from 1 through 9 {
+                    &:nth-of-type(#{$i}) {
+                        animation-delay: $i * 0.25s + 0.5s;
+                    }
+                }
+
+                @keyframes features {
+                    0% {
+                        transform: translate(0, 3em);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: translate(0, 0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .item {
+            transform: translate(0, 5em);
+            opacity: 0;
+        }
+    }
+
     .container {
 
     }

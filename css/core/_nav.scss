@@ -69,16 +69,19 @@
         }
     }
 
-    a:not(.button) {
+    a {
         @include fs(16px);
-        display: block;
-        color: $color-0;
         text-decoration: none;
         transition: $transition-1;
 
-        &:hover,
-        &:focus {
-            color: $color-1;
+        &:not(.button) {
+            display: block;
+            color: $color-0;
+
+            &:hover,
+            &:focus {
+                color: $color-1;
+            }
         }
 
         i {

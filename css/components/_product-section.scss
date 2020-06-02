@@ -1,8 +1,10 @@
 .product-section {
+    position: relative;
     min-height: 100vh;
     padding: 2vw 0;
-    background: linear-gradient(to bottom, $color-grey-1, #fff);
+    background: linear-gradient(to bottom, $color-grey-1, transparent);
     margin-bottom: 0;
+    z-index: 1;
 
     &:nth-of-type(odd) {
         .group {
@@ -19,6 +21,46 @@
 
     .group {
         align-items: center;
+    }
+
+    .animation-active & {
+
+        &.active {
+
+            .text {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            .image,
+            .video {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            .buttons {
+                transform: translate(0, 0);
+            }
+        }
+
+        .text {
+            transition: 600ms ease-in-out;
+            transform: translate(0, 3em);
+            opacity: 0;
+        }
+
+        .image,
+        .video {
+            transition: 600ms ease-in-out;
+            transition-delay: 200ms;
+            transform: translate(0, 3em);
+            opacity: 0;
+        }
+
+        .buttons {
+            transition: 600ms ease-in-out;
+            transform: translate(-2em, 0);
+        }
     }
 
     .text,
