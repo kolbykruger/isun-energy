@@ -9,15 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < productButton.length; i++) {
             productButton[i].addEventListener('click', function() {
 
+                let id = this.dataset.id;
+                let selectedFeature = productFeatures.querySelector('.feature-box[data-id="'+id+'"]');
+
+                if (productButton[i].classList.contains('active')) {
+                    productButton[i].classList.remove('active');
+                    selectedFeature.classList.remove('active')
+                    return false
+                }
+
                 for (let j = 0; j < productFeature.length; j++) {
                     productFeature[j].classList.remove('active')
                     productButton[j].classList.remove('active')
                 }
 
                 this.classList.add('active');
-                let id = this.dataset.id;
-
-                let selectedFeature = productFeatures.querySelector('.feature-box[data-id="'+id+'"]');
                 selectedFeature.classList.add('active')
                 selectedFeature.focus();
             })

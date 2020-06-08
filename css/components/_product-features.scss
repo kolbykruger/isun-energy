@@ -12,12 +12,13 @@
 
     .feature-box,
     .image {
-        width: calc(33.333% - 2em);
+        width: calc(30% - 2em);
         margin: 1em;
     }
 
     .image {
         position: relative;
+        width: calc(40% - 2em);
         height: 400px;
         background: #ddd;
         display: flex;
@@ -109,6 +110,10 @@
                 transition: box-shadow 600ms ease;
                 box-shadow: 0 0 0 800px $color-1;
             }
+        }
+
+        &[data-id="4"] {
+            width: calc(40% - 2em);
         }
 
         &::before {

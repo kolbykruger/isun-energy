@@ -1,0 +1,14 @@
+.tagline {
+    background: $color-1;
+    padding: 6em 0;
+
+    .container {
+        max-width: 90%;
+    }
+
+    p {
+        @extend .fs-1;
+        color: #fff;
+        line-height: 1.25;
+    }
+}

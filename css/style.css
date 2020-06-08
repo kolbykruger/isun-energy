@@ -583,24 +583,28 @@ a {
 }
 
 h1,
-.fs-1 {
+.fs-1,
+.tagline p {
   line-height: 1.15;
   font-weight: 600;
   color: #1e1b24;
 }
 h1,
-.fs-1 {
+.fs-1,
+.tagline p {
   font-size: 2.5rem;
 }
 @media screen and (min-width: 38rem) {
   h1,
-.fs-1 {
+.fs-1,
+.tagline p {
     font-size: calc(2.5rem + 2.5 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
   h1,
-.fs-1 {
+.fs-1,
+.tagline p {
     font-size: 5rem;
   }
 }
@@ -1314,8 +1318,7 @@ footer .ewd img {
 .section-heading .sup {
   text-transform: uppercase;
   font-weight: 600;
-  opacity: 0.65;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .section-heading h2 {
   margin-bottom: 0.5em;
@@ -1562,11 +1565,12 @@ footer .ewd img {
 }
 .product-features .feature-box,
 .product-features .image {
-  width: calc(33.333% - 2em);
+  width: calc(30% - 2em);
   margin: 1em;
 }
 .product-features .image {
   position: relative;
+  width: calc(40% - 2em);
   height: 400px;
   background: #ddd;
   display: flex;
@@ -1652,6 +1656,9 @@ footer .ewd img {
 .product-features .feature-box.active::before, .product-features .feature-box:hover::before, .product-features .feature-box:focus::before {
   transition: box-shadow 600ms ease;
   box-shadow: 0 0 0 800px #F0502D;
+}
+.product-features .feature-box[data-id="4"] {
+  width: calc(40% - 2em);
 }
 .product-features .feature-box::before {
   content: "";
@@ -1794,6 +1801,18 @@ footer .ewd img {
   font-family: "Font Awesome 5 Pro";
   margin-right: 0.5em;
   color: #F0502D;
+}
+
+.tagline {
+  background: #F0502D;
+  padding: 6em 0;
+}
+.tagline .container {
+  max-width: 90%;
+}
+.tagline p {
+  color: #fff;
+  line-height: 1.25;
 }
 
 .responsive-iframe {
@@ -2483,13 +2502,14 @@ p.simplesearch-results,
 }
 .introduction .info {
   position: relative;
-  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
   padding: 3em;
   z-index: 2;
 }
 .introduction .info h1 {
   color: #fff;
-  font-size: 3rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
 }
 .introduction .info p {
   color: rgba(255, 255, 255, 0.9);
@@ -2508,9 +2528,6 @@ p.simplesearch-results,
     font-size: 1.25rem;
   }
 }
-.introduction .info h1, .introduction .info p {
-  text-shadow: 1px 1px 1px #000;
-}
 .introduction .video {
   position: absolute;
   top: 0;
@@ -2522,6 +2539,12 @@ p.simplesearch-results,
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+.introduction .video img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(0, -10%);
 }
 .introduction .video .video-scroll {
   position: absolute;
