@@ -1489,70 +1489,72 @@ footer .ewd img {
   color: #fff;
 }
 
-.product-section {
+.story {
   position: relative;
-  min-height: 100vh;
-  padding: 2vw 0;
   background: linear-gradient(to bottom, #F6F6F6, transparent);
   margin-bottom: 0;
   z-index: 1;
 }
-.product-section:nth-of-type(odd) .group {
+.story:nth-of-type(odd) .group {
   flex-flow: row-reverse;
 }
-.product-section .container {
-  min-height: 100vh;
+.story .container {
   display: flex;
   justify-content: center;
   flex-flow: column;
+  padding: 0;
+  max-width: 100%;
 }
-.product-section .group {
+.story .group {
   align-items: center;
 }
-.animation-active .product-section.active .text {
+.animation-active .story.active .text {
   transform: translate(0, 0);
   opacity: 1;
 }
-.animation-active .product-section.active .image,
-.animation-active .product-section.active .video {
+.animation-active .story.active .image,
+.animation-active .story.active .video {
   transform: translate(0, 0);
   opacity: 1;
 }
-.animation-active .product-section.active .buttons {
+.animation-active .story.active .buttons {
   transform: translate(0, 0);
 }
-.animation-active .product-section .text {
+.animation-active .story .text {
   transition: 600ms ease-in-out;
   transform: translate(0, 3em);
   opacity: 0;
 }
-.animation-active .product-section .image,
-.animation-active .product-section .video {
+.animation-active .story .image,
+.animation-active .story .video {
   transition: 600ms ease-in-out;
   transition-delay: 200ms;
   transform: translate(0, 3em);
   opacity: 0;
 }
-.animation-active .product-section .buttons {
+.animation-active .story .buttons {
   transition: 600ms ease-in-out;
   transform: translate(-2em, 0);
 }
-.product-section .text,
-.product-section .image {
+.story .text,
+.story .image {
   flex: 1;
   padding: 5em;
 }
-.product-section .video {
+.story .video {
   flex: 1.618;
   padding: 5em;
 }
-.product-section .image {
+.story .image {
   background: #E7E7E7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
 }
-.product-section .image::before {
+.story .image img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.story .image::before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -1806,6 +1808,7 @@ footer .ewd img {
 .tagline {
   background: #F0502D;
   padding: 6em 0;
+  margin: 0 auto;
 }
 .tagline .container {
   max-width: 90%;
