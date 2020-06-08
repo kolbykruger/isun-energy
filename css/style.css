@@ -545,8 +545,6 @@ body {
   font-size: 1rem;
   max-width: 100vw;
   overflow-x: hidden;
-  background-image: url("../images/diag-dots.svg");
-  background-size: 20px;
 }
 
 p {
@@ -586,8 +584,9 @@ a {
 
 h1,
 .fs-1 {
-  line-height: 1.3;
+  line-height: 1.15;
   font-weight: 600;
+  color: #1e1b24;
 }
 h1,
 .fs-1 {
@@ -596,13 +595,13 @@ h1,
 @media screen and (min-width: 38rem) {
   h1,
 .fs-1 {
-    font-size: calc(2.5rem + 0.625 * ((100vw - 38rem) / 32));
+    font-size: calc(2.5rem + 2.5 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
   h1,
 .fs-1 {
-    font-size: 3.125rem;
+    font-size: 5rem;
   }
 }
 
@@ -1310,7 +1309,7 @@ footer .ewd img {
 
 .section-heading {
   text-align: center;
-  margin: 3em 0 6em;
+  margin: 3em 0 3em;
 }
 .section-heading .sup {
   text-transform: uppercase;
@@ -1320,6 +1319,11 @@ footer .ewd img {
 }
 .section-heading h2 {
   margin-bottom: 0.5em;
+}
+.section-heading .summary {
+  max-width: 68ch;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 /* Button Styling */
@@ -1410,6 +1414,7 @@ footer .ewd img {
 .button-text {
   color: #F0502D;
   background: transparent;
+  padding: 0;
 }
 .button-slim {
   padding: 1em 1.5em;
@@ -1548,6 +1553,140 @@ footer .ewd img {
   content: "";
   display: block;
   padding-top: 100%;
+}
+
+.product-features .group {
+  align-items: flex-end;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+.product-features .feature-box,
+.product-features .image {
+  width: calc(33.333% - 2em);
+  margin: 1em;
+}
+.product-features .image {
+  position: relative;
+  height: 400px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-features .image button {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: #F0502D;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  animation: pulse 1500ms infinite;
+  cursor: pointer;
+}
+.product-features .image button i {
+  transform-origin: center;
+  transition: 300ms ease;
+}
+.product-features .image button.active {
+  animation: none;
+  border: 2px solid #363636;
+}
+.product-features .image button.active i {
+  transform: rotate(-225deg);
+}
+.product-features .image button[data-id="1"] {
+  top: 10%;
+  left: 5%;
+}
+.product-features .image button[data-id="2"] {
+  top: 55%;
+  left: 60%;
+}
+.product-features .image button[data-id="3"] {
+  top: 36%;
+  left: 42%;
+}
+.product-features .image button[data-id="4"] {
+  top: 92%;
+  left: 22%;
+}
+.product-features .image button[data-id="5"] {
+  top: 42%;
+  left: 86%;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #F0502D;
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(240, 80, 45, 0.15);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 80, 45, 0);
+  }
+}
+.product-features .feature-box {
+  position: relative;
+  padding: 2em;
+  border-radius: 0.125em;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 600ms ease;
+}
+.product-features .feature-box.active, .product-features .feature-box:hover, .product-features .feature-box:focus {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.11), 0 3px 6px rgba(0, 0, 0, 0.08);
+  color: #fff;
+  transform: translate(0, -0.5em);
+}
+.product-features .feature-box.active h3, .product-features .feature-box:hover h3, .product-features .feature-box:focus h3 {
+  color: #fff;
+}
+.product-features .feature-box.active .action, .product-features .feature-box:hover .action, .product-features .feature-box:focus .action {
+  color: #fff;
+}
+.product-features .feature-box.active::before, .product-features .feature-box:hover::before, .product-features .feature-box:focus::before {
+  transition: box-shadow 600ms ease;
+  box-shadow: 0 0 0 800px #F0502D;
+}
+.product-features .feature-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 2px;
+  height: 2px;
+  border-radius: 500em;
+  background: transparent;
+  box-shadow: 0 0 0 0 #F0502D;
+  transition: box-shadow 200ms ease;
+  z-index: -1;
+}
+.product-features .feature-box .icon {
+  font-size: 2rem;
+}
+.product-features .feature-box .action {
+  transition: color 300ms ease;
+}
+.product-features .feature-box .action span + i {
+  margin-left: 0.5em;
+  transition: 300ms ease;
+}
+.product-features .feature-box .action:hover, .product-features .feature-box .action:focus {
+  background: none;
+  transform: none;
+  box-shadow: none;
+}
+.product-features .feature-box .action:hover i, .product-features .feature-box .action:focus i {
+  margin-left: 1em;
+}
+.product-features .feature-box h3 {
+  margin: 0.5em 0;
+  transition: color 300ms ease;
 }
 
 .impact {
@@ -2350,6 +2489,7 @@ p.simplesearch-results,
 }
 .introduction .info h1 {
   color: #fff;
+  font-size: 3rem;
 }
 .introduction .info p {
   color: rgba(255, 255, 255, 0.9);
@@ -2377,22 +2517,11 @@ p.simplesearch-results,
   left: 0;
   width: 100%;
   height: 100%;
-  background: #363636;
-}
-.introduction .video::before {
-  content: "";
-  background: url(https://espressobueno.com/css/../images/screen.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .introduction .video video {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.75;
 }
 .introduction .video .video-scroll {
   position: absolute;

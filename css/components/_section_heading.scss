@@ -1,6 +1,6 @@
 .section-heading {
     text-align: center;
-    margin: 3em 0 6em;
+    margin: 3em 0 3em;
 
     .sup {
         text-transform: uppercase;
@@ -11,5 +11,11 @@
 
     h2 {
         margin-bottom: 0.5em;
+    }
+
+    .summary {
+        max-width: 68ch;
+        margin: 0 auto;
+        font-size: 1.5rem;
     }
 }
