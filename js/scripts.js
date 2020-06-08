@@ -1,3 +1,31 @@
+//Product Features
+document.addEventListener('DOMContentLoaded', function() {
+    let productFeatures = document.querySelector('.product-features');
+
+    if (productFeatures) {
+        let productFeature = productFeatures.querySelectorAll('.feature-box'),
+            productButton = productFeatures.querySelectorAll('button[data-id]');
+
+        for (let i = 0; i < productButton.length; i++) {
+            productButton[i].addEventListener('click', function() {
+
+                for (let j = 0; j < productFeature.length; j++) {
+                    productFeature[j].classList.remove('active')
+                    productButton[j].classList.remove('active')
+                }
+
+                this.classList.add('active');
+                let id = this.dataset.id;
+
+                let selectedFeature = productFeatures.querySelector('.feature-box[data-id="'+id+'"]');
+                selectedFeature.classList.add('active')
+                selectedFeature.focus();
+            })
+
+        }
+    }
+})
+
 //Animations
 $(document).ready(function() {
     var controller = new ScrollMagic.Controller;
