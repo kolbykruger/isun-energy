@@ -1550,7 +1550,7 @@ footer .ewd img {
   padding: 0;
 }
 .story .image img {
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
