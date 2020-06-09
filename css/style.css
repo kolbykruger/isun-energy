@@ -382,7 +382,6 @@ https://flickity.metafizzy.co
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -569,9 +568,11 @@ p {
 }
 p.sup {
   text-transform: uppercase;
-  font-weight: 600;
   letter-spacing: 0.05em;
   color: #F0502D;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 p:last-of-type {
@@ -891,7 +892,6 @@ hr::before {
 .nav {
   text-align: center;
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   z-index: 10;
 }
@@ -1315,11 +1315,6 @@ footer .ewd img {
   text-align: center;
   margin: 3em 0 3em;
 }
-.section-heading .sup {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
 .section-heading h2 {
   margin-bottom: 0.5em;
 }
@@ -1374,7 +1369,6 @@ footer .ewd img {
   transition: 50ms ease;
   text-decoration: none;
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
 }
@@ -1505,9 +1499,6 @@ footer .ewd img {
   padding: 0;
   max-width: 100%;
 }
-.story .group {
-  align-items: center;
-}
 .animation-active .story.active .text {
   transform: translate(0, 0);
   opacity: 1;
@@ -1538,12 +1529,11 @@ footer .ewd img {
 }
 .story .text,
 .story .image {
-  flex: 1;
-  padding: 5em;
+  width: 50%;
+  padding: 8em;
 }
-.story .video {
-  flex: 1.618;
-  padding: 5em;
+.story .text {
+  width: 50%;
 }
 .story .image {
   background: #E7E7E7;
@@ -1551,13 +1541,18 @@ footer .ewd img {
 }
 .story .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
-.story .image::before {
-  content: "";
-  display: block;
-  padding-top: 100%;
+.story h2 {
+  margin: 0.25em 0;
+}
+.story .description {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+.story .description > * {
+  font-size: 1.5rem;
 }
 
 .product-features .group {
@@ -1567,17 +1562,19 @@ footer .ewd img {
 }
 .product-features .feature-box,
 .product-features .image {
-  width: calc(30% - 2em);
-  margin: 1em;
+  width: calc(30% - 0.5em);
+  margin: 0.25em;
 }
 .product-features .image {
   position: relative;
-  width: calc(40% - 2em);
+  width: calc(40% - 0.5em);
   height: 400px;
-  background: #ddd;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.product-features .image img {
+  filter: drop-shadow(-2em 10em 14mm rgba(0, 0, 0, 0.35));
 }
 .product-features .image button {
   position: absolute;
@@ -1607,23 +1604,23 @@ footer .ewd img {
 }
 .product-features .image button[data-id="1"] {
   top: 10%;
-  left: 5%;
+  left: 7%;
 }
 .product-features .image button[data-id="2"] {
-  top: 55%;
-  left: 60%;
+  top: 59%;
+  left: 82%;
 }
 .product-features .image button[data-id="3"] {
-  top: 36%;
-  left: 42%;
+  top: 60%;
+  left: 32%;
 }
 .product-features .image button[data-id="4"] {
-  top: 92%;
-  left: 22%;
+  top: 25%;
+  left: 70%;
 }
 .product-features .image button[data-id="5"] {
-  top: 42%;
-  left: 86%;
+  top: 40%;
+  left: 56%;
 }
 @keyframes pulse {
   0% {
@@ -1643,6 +1640,7 @@ footer .ewd img {
   overflow: hidden;
   text-decoration: none;
   transition: 600ms ease;
+  outline: none;
 }
 .product-features .feature-box.active, .product-features .feature-box:hover, .product-features .feature-box:focus {
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.11), 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -1660,7 +1658,7 @@ footer .ewd img {
   box-shadow: 0 0 0 800px #F0502D;
 }
 .product-features .feature-box[data-id="4"] {
-  width: calc(40% - 2em);
+  width: calc(40% - 0.5em);
 }
 .product-features .feature-box::before {
   content: "";
@@ -1812,6 +1810,7 @@ footer .ewd img {
 }
 .tagline .container {
   max-width: 90%;
+  text-align: center;
 }
 .tagline p {
   color: #fff;
@@ -2283,7 +2282,6 @@ p.simplesearch-results,
 
 .carousel {
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .carousel .container {
@@ -2294,7 +2292,6 @@ p.simplesearch-results,
 }
 .carousel .slide {
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 100%;
   position: relative;
@@ -2302,13 +2299,11 @@ p.simplesearch-results,
 }
 .carousel .slide a {
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   text-decoration: none;
 }
 .carousel .slide img {
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 100%;
   height: auto;
@@ -2607,7 +2602,6 @@ p.simplesearch-results,
   width: 100%;
   height: auto;
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
 }

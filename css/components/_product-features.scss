@@ -12,18 +12,22 @@
 
     .feature-box,
     .image {
-        width: calc(30% - 2em);
-        margin: 1em;
+        width: calc(30% - 0.5em);
+        margin: 0.25em;
     }
 
     .image {
         position: relative;
-        width: calc(40% - 2em);
+        width: calc(40% - 0.5em);
         height: 400px;
-        background: #ddd;
+        //background: #ddd;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        img {
+            filter: drop-shadow(-2em 10em 14mm rgb(0, 0, 0, 0.35));
+        }
 
         button {
             position: absolute;
@@ -56,23 +60,23 @@
 
             &[data-id="1"] {
                 top: 10%;
-                left: 5%;
+                left: 7%;
             }
             &[data-id="2"] {
-                top: 55%;
-                left: 60%;
+                top: 59%;
+                left: 82%;
             }
             &[data-id="3"] {
-                top: 36%;
-                left: 42%;
+                top: 60%;
+                left: 32%;
             }
             &[data-id="4"] {
-                top: 92%;
-                left: 22%;
+                top: 25%;
+                left: 70%;
             }
             &[data-id="5"] {
-                top: 42%;
-                left: 86%;
+                top: 40%;
+                left: 56%;
             }
 
             @keyframes pulse {
@@ -90,6 +94,7 @@
         overflow: hidden;
         text-decoration: none;
         transition: 600ms ease;
+        outline: none;
 
         &.active,
         &:hover,
@@ -113,7 +118,7 @@
         }
 
         &[data-id="4"] {
-            width: calc(40% - 2em);
+            width: calc(40% - 0.5em);
         }
 
         &::before {

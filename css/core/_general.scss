@@ -53,10 +53,11 @@ p {
 
     &.sup {
         text-transform: uppercase;
-        font-weight: 600;
-        //font-size: 0.875rem;
         letter-spacing: 0.05em;
         color: $color-1;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
 }
 

@@ -19,7 +19,7 @@
     }
 
     .group {
-        align-items: center;
+
     }
 
     .animation-active & {
@@ -64,17 +64,12 @@
 
     .text,
     .image {
-        flex: 1;
-        padding: 5em;
-    }
-
-    .video {
-        flex: 1.618;
-        padding: 5em;
+        width: 50%;
+        padding: 8em;
     }
 
     .text {
-
+        width: 50%;
     }
 
     .image {
@@ -83,14 +78,21 @@
 
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
         }
+    }
 
-        &::before {
-            content: '';
-            display: block;
-            padding-top: 100%;
+    h2 {
+        margin: 0.25em 0;
+    }
+
+    .description {
+        max-width: 68ch;
+        margin: 0 auto;
+
+        > * {
+            font-size: 1.5rem;
         }
     }
 }

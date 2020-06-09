@@ -13,20 +13,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 let selectedFeature = productFeatures.querySelector('.feature-box[data-id="'+id+'"]');
 
                 if (productButton[i].classList.contains('active')) {
-                    productButton[i].classList.remove('active');
-                    selectedFeature.classList.remove('active')
+                    removeActive(productButton[i], selectedFeature)
                     return false
                 }
 
+                removeAllActive(productFeature, productButton)
+                setActive(productButton[i], selectedFeature)
+
+            });
+
+            productButton[i].addEventListener('mouseenter', function() {
+                let id = this.dataset.id;
+                let selectedFeature = productFeatures.querySelector('.feature-box[data-id="'+id+'"]');
+                removeAllActive(productFeature, productButton)
+                setActive(productButton[i], selectedFeature)
+            })
+            productButton[i].addEventListener('mouseleave', function() {
+                removeAllActive(productFeature, productButton)
+            })
+
+            function setActive(el, selectedFeature) {
+                el.classList.add('active');
+                selectedFeature.classList.add('active')
+                selectedFeature.focus();
+            }
+
+            function removeActive(el, selectedFeature) {
+                el.classList.remove('active');
+                selectedFeature.classList.remove('active')
+            }
+
+            function removeAllActive(productFeature, productButton) {
                 for (let j = 0; j < productFeature.length; j++) {
                     productFeature[j].classList.remove('active')
                     productButton[j].classList.remove('active')
                 }
-
-                this.classList.add('active');
-                selectedFeature.classList.add('active')
-                selectedFeature.focus();
-            })
+            }
 
         }
     }
