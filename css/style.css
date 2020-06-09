@@ -1813,7 +1813,12 @@ footer .ewd img {
   color: #F0502D;
   font-weight: 400;
   line-height: 1;
-  font-size: 6rem;
+  font-size: 7rem;
+}
+.impact .stats .value .unit {
+  font-size: 2rem;
+  display: block;
+  margin: 0.25em 0 0.25em;
 }
 .impact .stats .label {
   color: #fff;
