@@ -85,6 +85,7 @@
     }
 
     .image {
+        position: relative;
         background: $color-3;
         padding: 0;
 
@@ -93,15 +94,24 @@
             height: 100%;
             object-fit: cover;
         }
+
     }
 
     h2 {
+        display: flex;
+        align-items: center;
         margin: 0.25em 0;
+
+
+    .icecream-cone {
+        max-width: 45px;
+        margin-right: 0.25em;
+    }
+
     }
 
     .description {
         max-width: 68ch;
-        margin: 0 auto;
 
         > * {
             font-size: 1.5rem;

@@ -1,6 +1,6 @@
 .tagline {
     background: $color-1;
-    padding: 6em 0;
+    padding: 1em 0;
     margin: 0 auto;
 
     @media (max-width: 1400px) {
@@ -8,7 +8,7 @@
     }
 
     .container {
-        max-width: 90%;
+        max-width: 80%;
         text-align: center;
     }
 
@@ -16,6 +16,14 @@
         @extend .fs-1;
         color: #fff;
         line-height: 1.25;
+
+        strong {
+            color: $color-2;
+        }
+
+        em {
+            color: $color-3;
+        }
 
         @media (max-width: 1400px) {
             font-size: 4rem;

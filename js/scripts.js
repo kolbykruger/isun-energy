@@ -1,3 +1,23 @@
+// Heading Animations
+wording('section .wording')
+
+function wording(element) {
+    let elem = document.querySelectorAll(element);
+    if (elem) {
+        for(let i = 0; i < elem.length; i++) {
+
+            let words = elem[i].innerHTML.split(' ');
+
+            elem[i].setAttribute('aria-label', elem[i].textContent);
+            elem[i].textContent = '';
+
+            for (let j = 0; j < words.length; j++) {
+                elem[i].innerHTML += '<div class="word-container" aria-hidden="true"><span class="word word-'+(j+1)+'" aria-hidden="true">'+words[j]+'&nbsp;</span></div>'
+            }
+        }
+    }
+}
+
 //Product Features
 document.addEventListener('DOMContentLoaded', function() {
     let productFeatures = document.querySelector('.product-features');
