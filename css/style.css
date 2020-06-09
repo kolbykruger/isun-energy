@@ -1499,6 +1499,14 @@ footer .ewd img {
   padding: 0;
   max-width: 100%;
 }
+.story .group {
+  min-height: 100vh;
+}
+@media (max-width: 1400px) {
+  .story .group {
+    min-height: auto;
+  }
+}
 .animation-active .story.active .text {
   transform: translate(0, 0);
   opacity: 1;
@@ -1532,8 +1540,17 @@ footer .ewd img {
   width: 50%;
   padding: 8em;
 }
+@media (max-width: 1400px) {
+  .story .text,
+.story .image {
+    padding: 5em;
+  }
+}
 .story .text {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 .story .image {
   background: #E7E7E7;
@@ -1553,6 +1570,11 @@ footer .ewd img {
 }
 .story .description > * {
   font-size: 1.5rem;
+}
+@media (max-width: 1400px) {
+  .story .description > * {
+    font-size: 1.125rem;
+  }
 }
 
 .product-features .group {
@@ -1704,9 +1726,11 @@ footer .ewd img {
   color: #fff;
   margin-bottom: 0;
   z-index: 2;
+  overflow: hidden;
 }
 .animation-active .impact.active::before {
   filter: grayscale(0.25);
+  transform: scale(1);
 }
 .animation-active .impact.active .stats {
   transform: translate(0, 1.5em);
@@ -1740,7 +1764,8 @@ footer .ewd img {
 }
 .animation-active .impact::before {
   filter: grayscale(1);
-  transition: filter 3s ease-in-out;
+  transform: scale(1.5);
+  transition: 3s ease-in-out;
 }
 .impact::before {
   content: "";
@@ -1751,8 +1776,10 @@ footer .ewd img {
   height: 100%;
   background-image: url("../images/impact-bg.jpg");
   background-size: cover;
+  background-attachment: fixed;
   opacity: 0.75;
   filter: grayscale(0.5);
+  transform: scale(1.5);
   z-index: -1;
 }
 .impact .container {
@@ -1788,8 +1815,8 @@ footer .ewd img {
 }
 
 .checklist {
-  margin: 1em auto;
-  padding-left: 1em;
+  margin: 0.5em auto;
+  padding-left: 0;
   padding-bottom: 0.5em;
 }
 .checklist li {
@@ -1808,6 +1835,11 @@ footer .ewd img {
   padding: 6em 0;
   margin: 0 auto;
 }
+@media (max-width: 1400px) {
+  .tagline {
+    padding: 1em 0;
+  }
+}
 .tagline .container {
   max-width: 90%;
   text-align: center;
@@ -1815,6 +1847,23 @@ footer .ewd img {
 .tagline p {
   color: #fff;
   line-height: 1.25;
+}
+@media (max-width: 1400px) {
+  .tagline p {
+    font-size: 4rem;
+  }
+}
+
+.video-render {
+  margin: 0 auto;
+}
+.video-render .container {
+  max-width: 100%;
+  padding: 0;
+}
+.video-render video {
+  width: 100%;
+  height: auto;
 }
 
 .responsive-iframe {
