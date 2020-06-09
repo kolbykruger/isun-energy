@@ -1583,6 +1583,10 @@ footer .ewd img {
   }
 }
 
+.product-features {
+  position: relative;
+  overflow: hidden;
+}
 .product-features .group {
   align-items: flex-end;
   transform-style: preserve-3d;
@@ -1596,10 +1600,6 @@ footer .ewd img {
 .product-features .image {
   position: relative;
   width: calc(50% - 0.5em);
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .product-features .image img {
   filter: drop-shadow(-2em 10em 14mm rgba(0, 0, 0, 0.35));
@@ -1649,6 +1649,10 @@ footer .ewd img {
 .product-features .image button[data-id="5"] {
   top: 40%;
   left: 56%;
+}
+.product-features .image button[data-id="6"] {
+  top: 32%;
+  left: 26%;
 }
 @keyframes pulse {
   0% {

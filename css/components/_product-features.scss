@@ -1,4 +1,6 @@
 .product-features {
+    position: relative;
+    overflow: hidden;
 
     .container {
 
@@ -19,11 +21,6 @@
     .image {
         position: relative;
         width: calc(50% - 0.5em);
-        height: 400px;
-        //background: #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         img {
             filter: drop-shadow(-2em 10em 14mm rgb(0, 0, 0, 0.35));
@@ -77,6 +74,10 @@
             &[data-id="5"] {
                 top: 40%;
                 left: 56%;
+            }
+            &[data-id="6"] {
+                top: 32%;
+                left: 26%;
             }
 
             @keyframes pulse {
