@@ -1590,12 +1590,12 @@ footer .ewd img {
 }
 .product-features .feature-box,
 .product-features .image {
-  width: calc(30% - 0.5em);
+  width: calc(25% - 0.5em);
   margin: 0.25em;
 }
 .product-features .image {
   position: relative;
-  width: calc(40% - 0.5em);
+  width: calc(50% - 0.5em);
   height: 400px;
   display: flex;
   align-items: center;
@@ -1685,9 +1685,6 @@ footer .ewd img {
   transition: box-shadow 600ms ease;
   box-shadow: 0 0 0 800px #F0502D;
 }
-.product-features .feature-box[data-id="4"] {
-  width: calc(40% - 0.5em);
-}
 .product-features .feature-box::before {
   content: "";
   position: absolute;
@@ -1722,6 +1719,7 @@ footer .ewd img {
 .product-features .feature-box h3 {
   margin: 0.5em 0;
   transition: color 300ms ease;
+  max-width: 90%;
 }
 
 .impact {
@@ -1901,6 +1899,7 @@ footer .ewd img {
 .video-render video {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .animation-active section.active .word {

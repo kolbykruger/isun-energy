@@ -12,13 +12,13 @@
 
     .feature-box,
     .image {
-        width: calc(30% - 0.5em);
+        width: calc(25% - 0.5em);
         margin: 0.25em;
     }
 
     .image {
         position: relative;
-        width: calc(40% - 0.5em);
+        width: calc(50% - 0.5em);
         height: 400px;
         //background: #ddd;
         display: flex;
@@ -117,9 +117,9 @@
             }
         }
 
-        &[data-id="4"] {
-            width: calc(40% - 0.5em);
-        }
+        // &[data-id="4"] {
+        //     width: calc(40% - 0.5em);
+        // }
 
         &::before {
             content: '';
@@ -162,6 +162,7 @@
         h3 {
             margin: 0.5em 0;
             transition: color 300ms ease;
+            max-width: 90%;
         }
     }
 
