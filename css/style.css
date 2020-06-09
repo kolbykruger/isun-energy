@@ -1854,16 +1854,36 @@ footer .ewd img {
 .tagline .container {
   max-width: 80%;
   text-align: center;
+  overflow: hidden;
+}
+.animation-active .tagline p {
+  transition: 500ms ease;
+  opacity: 0;
+}
+.animation-active .tagline p:first-of-type {
+  transform: translate(50%, 0);
+}
+.animation-active .tagline p:last-of-type {
+  transform: translate(-50%, 0);
+  transition-delay: 0.5s;
+}
+.animation-active .tagline.active p {
+  opacity: 1;
+}
+.animation-active .tagline.active p:first-of-type {
+  transform: translate(0, 0);
+}
+.animation-active .tagline.active p:last-of-type {
+  transform: translate(0, 0);
 }
 .tagline p {
   color: #fff;
   line-height: 1.25;
-}
-.tagline p strong {
-  color: #363636;
+  margin-bottom: 0;
 }
 .tagline p em {
   color: #E7E7E7;
+  opacity: 0.85;
 }
 @media (max-width: 1400px) {
   .tagline p {
